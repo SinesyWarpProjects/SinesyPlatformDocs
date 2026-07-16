@@ -101,59 +101,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Documentation',
-            items: [
-              {
-                label: 'User Guide',
-                to: '/docs/user-guide',
-              },
-              {
-                label: 'API',
-                to: '/docs/api',
-              },
-              {
-                label: 'Knowledge Base',
-                to: '/docs/knowledge-base',
-              },
-            ],
-          },
-          {
-            title: 'Most Popular Pages',
-            items: [
-              {
-                label: 'Discover 4WS.Platform',
-                href: 'https://4wsplatform.org/',
-              },
-              {
-                label: 'Watch the Video Tutorial',
-                href: 'https://4wsplatform.org/video-tutorial/',
-              },
-              {
-                label: 'Choose the Edition',
-                href: 'https://4wsplatform.org/licenses/',
-              },
-              {
-                label: 'Try it for free',
-                href: 'https://4wsplatform.org/try-4wsplatform/',
-              },
-            ],
-          },
-          {
-            title: 'Contact Us',
-            items: [
-              {
-                label: 'Email: 4wsplatform@sinesy.it',
-                href: 'mailto:4wsplatform@sinesy.it',
-              },
-              {
-                label: 'Phone: +39 0422 5011711',
-                href: 'tel:+390422501711',
-              },
-            ],
-          },
-        ],
         copyright: `Sinesy S.r.l. | Via Comunale di Camino, 22/D 31046 Oderzo (TV) | P.I. 04016390264<br/>Powered by <a href="https://www.sinesy.it/" target="_blank" rel="noopener noreferrer">Sinesy</a>`,
       },
       prism: {

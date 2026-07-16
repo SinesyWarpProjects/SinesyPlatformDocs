@@ -102,7 +102,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <CtaSection />
+        {/* <CtaSection /> */}
       </main>
     </Layout>
   );

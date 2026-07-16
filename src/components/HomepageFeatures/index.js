@@ -29,13 +29,21 @@ const FeatureList = [
       'A Search Engine and Frequently Asked Questions about the use of the Platform, with sections for the most common scenarios, including solutions and examples.',
     link: '/docs/knowledge-base',
     linkText: 'Learn more',
-  },{
+  },
+  {
+    title:"Notebook LM",
+    icon:"🧠",
+    description:"Notebook LM is a tool that allows you to create and manage your own knowledge base using AI-powered notebooks. You can use it to document your projects, share knowledge with your team, and get insights from your data.",
+    link:"https://notebooklm.google.com/notebook/7de3e418-ed6f-4c22-9fe0-35bf9ee57484",
+    linkText:"Ask Notebook LM",
+  },
+  {
     title:"Jira Support",
     icon:"🛠️",
     description:"If you need support, you can open a ticket on our Jira Support Portal. Our team will assist you in resolving any issues or questions you may have.",
     link:"https://sinesy.atlassian.net/servicedesk/customer/portal/45",
     linkText:"Open a Ticket",
-  }
+  }, 
 ];
 
 function Feature({title, icon, description, link, linkText, links, contacts, isExternal}) {
