@@ -19,6 +19,7 @@ Built with [Docusaurus 3](https://docusaurus.io/) and deployed automatically on 
 - [Deployment](#deployment)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
+- [Generate NotebookLM Sources](#generate-notebooklm-sources)
 - [Contact](#contact)
 
 ---
@@ -200,6 +201,25 @@ SinesyPlatformDocs/
 5. Open a Pull Request
 
 > The sidebar is auto-generated from the filesystem structure — simply add files in the correct directory and they will appear automatically.
+
+---
+
+## Generate NotebookLM Sources
+
+The `generate_notebooklm.sh` script consolidates the documentation into a set of standalone Markdown files suitable for use as [NotebookLM](https://notebooklm.google.com/) sources.
+
+```bash
+./generate_notebooklm.sh
+```
+
+The script:
+
+1. Copies `function-jss.md` and `function-jss-ee.md` individually (they are large standalone references).
+2. Recursively walks each top-level docs section (`api`, `api-mobile`, `knowledge-base`, `user-guide`).
+3. For every directory found, produces a single `.md` file containing all the Markdown files directly in that directory.
+4. Output filenames use `-` to join path components (e.g. `docs/user-guide/modules/bpm/` → `user-guide-modules-bpm.md`).
+
+Generated files are placed in the `notebooklm/` folder at the project root.
 
 ---
 
