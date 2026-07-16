@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Puoi aggiornare alla 20 o alla versione che usi localmente
+          node-version: 24
           cache: npm # Cambia in 'yarn' o 'pnpm' se usi quelli
 
       - name: Installa le dipendenze
