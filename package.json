@@ -2,6 +2,7 @@
   "name": "sinesy-platfrom-docs-test",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://SinesyWarpProjects.github.io/SinesyPlatformDocs",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -12,6 +13,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
+    
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^2.0.1",
@@ -26,7 +28,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
-    "@docusaurus/types": "3.10.2"
+    "@docusaurus/types": "3.10.2",
+    "gh-pages": "^6.3.0"
   },
   "browserslist": {
     "production": [

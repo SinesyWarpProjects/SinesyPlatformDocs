@@ -1,0 +1,52 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      # Se il tuo branch principale si chiama "master", cambia "main" in "master"
+
+# Configura i permessi necessari per permettere a GitHub Actions di pubblicare sulle Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita che partano più deploy simultanei creando conflitti
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Importante se la tua documentazione mostra la data dell'ultimo aggiornamento
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Puoi aggiornare alla 20 o alla versione che usi localmente
+          cache: npm # Cambia in 'yarn' o 'pnpm' se usi quelli
+
+      - name: Installa le dipendenze
+        run: npm ci # Usa 'yarn install --frozen-lockfile' se usi yarn
+
+      - name: Build del sito
+        run: npm run build
+
+      - name: Upload degli artefatti
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build # Docusaurus compila i file nella cartella 'build' di default
+
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
